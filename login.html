@@ -7,6 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <title>eMercado - Todo lo que busques está aquí</title>
+ 
+  
+  <meta name="google-signin-scope" content="profile email">
+  <meta name="google-signin-client_id" content="5088392707-9fs68uf8pfk8su119tf0em982sc4r1rf.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+
 
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
@@ -37,13 +43,27 @@
   </style>
 </head>
 
+
+
 <body class="text-center">
   <div class="container p-5">
     <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 1 (Fecha de entrega: 08/08/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+      <h4 class="alert-heading">Ingrese</h4></br>
+      <form action="index.html">
+        <label for="Email">Email:</label>
+        <input type="text" id="Email" onblur="cargarErrores('Email', 'span-Email', 'Debe ingresar email')"/><br> <br>
+        <span class="error" id="span-Email"></span><br><br>
+
+       
+
+        <label for="lname">Contraseña</label>
+        <input type="password" id="password" name="lname" required onblur="cargarErrores('password', 'span-password', 'Debe ingresar Contraseña')"/><br><br>
+        <span class="error" id="span-password"></span><br><br>
+
+        <button type="submit" >Login</button><br><br>
+
+        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+      </form>
     </div>
   </div>
 
