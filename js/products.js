@@ -30,7 +30,7 @@ function listado(arrayproductos) {
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes. hola
 document.addEventListener("DOMContentLoaded", function (e) {
-getJSONData(UCT_INFO_URL).then(function (resultObj){
+getJSONData(PRODUCT_INFO_URL).then(function (resultObj){
   if (resultObj.status === "ok"){
     arrayproductos = resultObj.data;
     listado(arrayproductos);
