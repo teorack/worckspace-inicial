@@ -9,7 +9,8 @@
   <title>eMercado - Todo lo que busques está aquí</title>
  
   
-  <meta name="google-signin-scope" content="profile email">
+  
+  <meta name="google-signin-scope" content="profile email"> <!-- Peticions e google -->
   <meta name="google-signin-client_id" content="849047549804-svpg11q6bbftorrddtcgugea3vuajnda.apps.googleusercontent.com">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
 
@@ -50,6 +51,7 @@
     <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
       <h4 class="alert-heading">Ingrese</h4></br>
       <form action="index.html">
+
         <label for="Email">Email:</label>
         <input type="text" id="Email" onblur="cargarErrores('Email', 'span-Email', 'Debe ingresar email')"/><br> <br>
         <span class="error" id="span-Email"></span><br><br>

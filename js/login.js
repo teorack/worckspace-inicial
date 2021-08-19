@@ -28,10 +28,11 @@ function cargarErrores(id, idMensaje, mensaje) {
         console.log('Given Name: ' + profile.getGivenName());
         console.log('Family Name: ' + profile.getFamilyName());
         console.log("Image URL: " + profile.getImageUrl());
-        console.log("Email: " + profile.getEmail());
+        localStorage.setItem('email', profile.getEmail());
         location.href = "index.html"
         // The ID token you need to pass to your backend:
         var id_token = googleUser.getAuthResponse().id_token;
         console.log("ID Token: " + id_token);
         
       }
+      

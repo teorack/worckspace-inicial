@@ -7,6 +7,22 @@
     <meta name="description" content="">
     <title>eMercado - Todo lo que busques está aquí</title>
 
+    <script>
+      document.addEventListener('DOMContentLoaded' , () => {
+        let login1 = localStorage.getItem('email');
+        let login2 = localStorage.getItem('username');
+        if (login1){
+          console.log('login email');
+          console.log(login1);
+        }else if (login2){
+          console.log('login username');
+          console.log(login2);
+        }else{
+        location.href = 'login.html';
+        }
+        });
+    </script>
+
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
     <!-- Bootstrap core CSS -->
