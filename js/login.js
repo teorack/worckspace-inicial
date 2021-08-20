@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function(e){
         alert (" Usuario : " + email + " Password : " + password ); 
         
        
-        location.href="next.html";
+        location.href="index.html";
         
         //getItem obtiene el dato almacenado en la posición "usuario"
        
