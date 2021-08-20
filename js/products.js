@@ -17,7 +17,7 @@ function listado(arrayproductos) {
                   <h4 class="mb-1">`+ product.name +`</h4>
                   <small class="text-muted">` + product.soldCount + ` artículos</small>
               </div>
-              <p class="mb-1">` + product.description + `</p>
+              <p class="mb-1">`  + product.currency + product.cost + `</p>
               
           </div>
       </div>
