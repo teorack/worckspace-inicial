@@ -5,21 +5,6 @@ document.addEventListener("DOMContentLoaded", function(e){
 
 });
 
-
-function cargarErrores(id, idMensaje, mensaje) {
-    //Validar nombre
-     var elementNombre = document.getElementById(id);
-      var elementError = document.getElementById(idMensaje);
-    if(elementNombre.value==""){
-        elementError.style.display = "block";
-        elementError.innerHTML = mensaje;
-         elementNombre.classList.add("error");
-         elementNombre.style.border = '1px solid red'
-    }else{
-        elementError.style.display = 'none';
-        elementNombre.style.border = '1px solid #000'
-    }}
-
     function onSignIn(googleUser) {
         // Useful data for your client-side scripts:
         var profile = googleUser.getBasicProfile();
@@ -37,3 +22,21 @@ function cargarErrores(id, idMensaje, mensaje) {
         
       }
       
+      function guardar(email, password){  
+
+        if (email.trim()==="" || password.trim()===""){ //Chequea que el dato recibido no esté vacío. 
+        //El método trim elimina los espacios en blanco al inicio y al final del mismo.
+            alert("El email está vacío");
+        }    else{
+        localStorage.setItem("usuario", email.trim()); //setItem almacena el dato en la posición "usuario"
+        localStorage.setItem("password", password.trim()); // Almaceno la contraseña
+        sessionStorage.setItem("usuario", email.trim());
+        alert (" Usuario : " + email + " Password : " + password ); 
+        
+       
+        location.href="next.html";
+        
+        //getItem obtiene el dato almacenado en la posición "usuario"
+       
+        }
+    }

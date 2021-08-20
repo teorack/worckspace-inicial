@@ -28,20 +28,20 @@
   <div class="inset">
   <p>
     <label for="email">EMAIL ADDRESS</label>
-    <input type="text" name="email" id="email">
+    <input type=text id="email" name="email" placeholder=" Nombre a guardar" required> <br><br>
   </p>
   <p>
     <label for="password">PASSWORD</label>
-    <input type="password" name="password" id="password">
+    <input type="password" id="password" name="password" placeholder=" Tu clave aquí " required> <br> <br>
   </p>
   <p>
     <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
   </p>
   </div>
   <p class="p-container">
-   
-    <input type="submit" name="go" id="go" value="Log in">
-  </p>
+    <button type="submit" onclick="guardar(email.value, password.value);" name="go" id="go" value="Log in">Guardame</button>
+     <br><a href="index.html">Ir a la siguiente</a>
+    </p>
 </form>
 
 
