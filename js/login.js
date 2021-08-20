@@ -18,25 +18,21 @@ document.addEventListener("DOMContentLoaded", function(e){
         // The ID token you need to pass to your backend:
         var id_token = googleUser.getAuthResponse().id_token;
         console.log("ID Token: " + id_token);
-        location.href = 'index.html'
+        location.href = 'index.html';
         
       }
       
-      function guardar(email, password){  
-
-        if (email.trim()==="" || password.trim()===""){ //Chequea que el dato recibido no esté vacío. 
-        //El método trim elimina los espacios en blanco al inicio y al final del mismo.
-            alert("El email está vacío");
-        }    else{
-        localStorage.setItem("usuario", email.trim()); //setItem almacena el dato en la posición "usuario"
-        localStorage.setItem("password", password.trim()); // Almaceno la contraseña
-        sessionStorage.setItem("usuario", email.trim());
-        alert (" Usuario : " + email + " Password : " + password ); 
-        
-       
+      function guardar(){  
+        var email = document.getElementById ('email');
+        var password = document.getElementById('password');
+        if (email.value ==="" || password.value ===""){ //Chequea que el dato recibido no esté vacío. 
+         }else{
         location.href="index.html";
+        sessionStorage.setItem("usuario", email.value); //setItem almacena el dato en la posición "usuario"
+        sessionStorage.setItem("password", password.value); // Almaceno la contraseña
         
         //getItem obtiene el dato almacenado en la posición "usuario"
        
         }
     }
+    
