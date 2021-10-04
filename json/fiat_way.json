@@ -1,0 +1,17 @@
+{
+    "id":"fiat_way",
+    "name": "Fiat Way",
+    "description": "El desempeño del pequeño UNO Way es interesante, a pesar de ser un motor pequeño de 1.4 litros y 85HP el manejo hasta los 100Km/h es similar al de cualquier otro auto de mayor potencia pues se mueve bien en ciudad, le gusta ir a altas revoluciones pues logra con facilidad llegar a la zona roja",
+    "cost": 14500,
+    "currency": "USD",
+    "soldCount": 52,
+    "category": "Autos",
+    "images": [
+        "img/prod3.jpg",
+        "img/prod3_1.jpg",
+        "img/prod3_2.jpg",
+        "img/prod3_3.jpg",
+        "img/prod3_4.jpg"
+    ],
+    "relatedProducts": [1, 3]
+}

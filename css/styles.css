@@ -150,7 +150,7 @@ a.custom-card:hover {
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.60);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.60);
 }
 
 /* Add some padding inside the card container */
@@ -170,6 +170,10 @@ a.custom-card:hover {
   font-size: 22px;
 }
 
+.checked {
+  color: orange;
+}
+
 /* Estilo de boton de carrito*/
 .card button {
   border: none;
@@ -185,4 +189,81 @@ a.custom-card:hover {
 
 .card button:hover {
   opacity: 0.7;
+}
+
+.carousel-inner img {
+  margin: auto;
+  border: 15px solid rgb(216, 216, 216);
+}
+
+.cost{
+  font-size: 2rem;
+}
+
+.card-img{
+  max-width: 15%;
+  max-height: 15%;
+}
+.ccontent{
+  margin-top: 30px;
+}
+
+.card-img-top {
+  position: relative;
+  margin: auto;
+  top: -15%;
+  max-width: 7rem !important;
+}
+
+.card-deck{
+  margin: auto;
+  margin-top: 10%;
+  max-width: 75%;
+}
+
+/* Configuracion de Estrellas */
+.rate {
+  float: left;
+  height: 46px;
+  padding: 0 10px;
+}
+.rate:not(:checked) > input {
+  position:absolute;
+  top: -9999px;
+  left: -9999px;
+  visibility: hidden;
+}
+.rate:not(:checked) > label {
+  float:right;
+  width:1em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:30px;
+  color:#ccc;
+}
+.rate:not(:checked) > label:before {
+  content: '★ ';
+}
+.rate > input:checked ~ label {
+  color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+/*------------------------------------------*/
+a {
+  color: black;
+}
+a:hover {
+  text-decoration: none;
+  color: black;
 }

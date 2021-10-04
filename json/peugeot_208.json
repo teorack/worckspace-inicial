@@ -1,0 +1,17 @@
+{
+    "id":"peugeot_208",
+    "name": "Peugeot 208",
+    "description": "El gusto y refinamiento de su diseño es indudable, tanto en la carrocería como en el habitáculo de este pequeño modelo. Frente a sus competidores, aunque quizá a un precio no tan atractivo, el Peugeot 208 cuenta con un interior que destaca por calidad y también por su equipamiento en el apartado tecnológico.",
+    "cost": 15200,
+    "currency": "USD",
+    "soldCount": 17,
+    "category": "Autos",
+    "images": [
+        "img/prod2.jpg",
+        "img/prod2_1.jpg",
+        "img/prod2_2.jpg",
+        "img/prod2_3.jpg",
+        "img/prod2_4.jpg"
+    ],
+    "relatedProducts": [0, 2]
+}

@@ -23,8 +23,14 @@ document.addEventListener("DOMContentLoaded", function(e){
             localStorage.setItem("username", mail);
             window.location="inicio.html";
         } else {
-            document.getElementById("resultado").innerHTML = "";
-            document.getElementById("resultado").innerHTML += "Error en Logeo. Verifique E-Mail y Contraseña";
+            if(pruebaemail(mail) != true){
+                document.getElementById("resultado").innerHTML = "";
+                document.getElementById("resultado").innerHTML += "Error en Logeo. Verifique Contraseña";
+            }else{
+                document.getElementById("resultado").innerHTML = "";
+                document.getElementById("resultado").innerHTML += "Error en Logeo. Verifique E-Mail";
+            }
+            
         }
         
     });

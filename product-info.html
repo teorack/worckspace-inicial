@@ -13,27 +13,99 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+
+  <!-- Add stars library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
   <nav class="site-header sticky-top py-1 bg-dark">
     <div class="container d-flex flex-column flex-md-row justify-content-between">
-      <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
+      <a class="py-2 d-none d-md-inline-block" href="inicio.html">Inicio</a>
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+      <a class="py-2 d-none d-md-inline-block" href=""></a>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="py-2 d-none d-md-inline-block" href="my-profile.html" id="user"></a>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Mi Perfil</a>
+          <a class="dropdown-item" href="cart.html">Mi carrito</a>
+          <a class="dropdown-item" href="index.html" onclick="signOut();">Cerrar Sesión</a>
+        </div>
+      </div>
+      
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 3 (Fecha de entrega: 19/09/2021) y Entrega 4 (Fecha de entrega: 03/10/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+  <div class=".container" id="content">
+  </div>
+  <div class="carousel slide"data-ride="carousel" id="carouselExampleControls">
+    <div class="carousel-inner" id="imagenes">
+      
+    </div>
+    <a class="carousel-control-prev w-50"href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next w-50" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Siguiente</span>
+    </a>
+  </div>
+
+  <div>
+    <p class="h4 text-center mt-4 text-white bg-dark">Productos Relacionados</p>
+        <div class="container">
+          <div class="card-deck display:block mt-0 mx-auto justify-content-center" style="max-width: auto !important;" id="RelatedProducts">
+
+          </div>
+        </div>
+  </div>
+
+  <div>
+    <p class="h4 text-center mt-4 text-white bg-dark">Opiniones de el Producto</p>
+    <div class=".container" style="margin-top: -2%; max-height: 20%;" id="comments">
+      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner" id="carousel-comments">
+          
+        </div>
+      </div>
     </div>
   </div>
-  <footer class="text-muted">
+
+  <div id="create-comments d-flex align-middle" style="max-width: 30%; margin-left: 35%; margin-top: 5%;">
+    <form>
+      <div class="form-group">
+        <label>Ingrese Nombre:</label>
+        <input class="form-control" type="text" placeholder="Nombre" id="name">
+      </div>
+
+      <div class="rate">
+        <input type="radio" id="star5" name="rate" value="5" />
+        <label for="star5" title="text">5 stars</label>
+        <input type="radio" id="star4" name="rate" value="4" />
+        <label for="star4" title="text">4 stars</label>
+        <input type="radio" id="star3" name="rate" value="3" />
+        <label for="star3" title="text">3 stars</label>
+        <input type="radio" id="star2" name="rate" value="2" />
+        <label for="star2" title="text">2 stars</label>
+        <input type="radio" id="star1" name="rate" value="1" />
+        <label for="star1" title="text">1 star</label>
+      </div>
+
+      <div class="form-group">
+        <br><br><br><label>Ingrese Comentario:</label>
+        <textarea id="comment" placeholder="Comentario" class="form-control"></textarea>
+      </div>
+      <div class="col text-center">
+      <button type="button" class="btn btn-primary" id="addComment">Enviar</button>
+    </div>
+    </form>
+  </div>
+
+  <footer class="text-muted" style=" margin-top: 10%">
     <div class="container">
       <p class="float-right">
         <a href="#">Volver arriba</a>
